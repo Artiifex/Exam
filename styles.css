@@ -210,3 +210,99 @@ button{
     grid-row: 7;
     border-bottom: 1px solid black;
   }
+  
+footer{
+    margin: 0 auto;
+    width: 100%;
+}
+
+footer h1{
+    padding-top: 100px;
+    text-align: center;
+}
+
+form{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer p{
+    padding-top: 40px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+form label{
+    padding-bottom: 5px;
+}
+
+form select{
+    height: 30px;
+}
+form input[type="text"]{
+    height: 30px;
+}
+.form-info input{
+    width: 100%;
+}
+.form-foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-foot .check{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+
+}
+
+.form-foot .check input[type="checkbox"] {
+    margin-right: 10px; 
+    
+}
+.form-foot .check label {
+    margin: 0;
+  }
+
+form button{
+    padding: 10px 25px;
+}
+
+form textarea{
+    margin-bottom: 10px;
+}
+.form-info{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-method label{
+    margin-right: 10px;
+}
+#contact-method input[type="radio"] {
+  margin-right: 10px;
+}
+
+.socials{
+    opacity: 100%;
+    background-color: white;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid grey;
+    display: flex;
+    justify-content: center;
+}
+
+.socials img{
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 40px;
+}
+.socials a:hover img {
+    opacity: 50%;
+  }
