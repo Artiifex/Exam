@@ -2,13 +2,16 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 
 body{
+    width: 100%;
     font-family: 'Alkatra', cursive;
     background: #f3f3f3
 }
+
 
 body button{
     border-radius: 10px;
@@ -16,7 +19,7 @@ body button{
 header{
     padding-top: 20px;
     width: 100%;
-    height: 80px
+    height: 130px
 }
 
 
@@ -30,10 +33,16 @@ header .header-brand{
 .navbar-brand {
     white-space: nowrap;
   }
+  
   .navbar-nav {
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   }
+   .navbar-nav .nav-item{
+    padding: 0 1%;
    }
   
   .social-icons a {
@@ -43,7 +52,9 @@ header .header-brand{
     margin-left: 8px;
   }
   
-  
+  section img{
+    width: 100%;
+  }
   
 .article1{
     width: 100%;
@@ -79,12 +90,13 @@ header .header-brand{
 
 
 .text{
-   margin-top: 20px;
-   padding: 0 10%;
+    font-size: 1.1rem;
+    padding: 5% 15%;
    
 }
 .text1{
-    padding: 3% 20%;
+    font-size: 1.1rem;
+    padding: 5% 15%;
     
  }
 button{
@@ -105,12 +117,12 @@ button{
     width: 100%;
 }
 
-.gallery .first-img{
-    display: none;
+.gallery .first-image{
+    width: 100%;
 }
 
-.gallery .second-img{
-    width: 100%;
+.gallery .second-image{
+    display: none;
 }
 
 
@@ -145,6 +157,9 @@ button{
     top: 50%;
     left: 0;
   }
+  .gallery-hover-content{
+    display: none;
+}
   
   .right-arrow{
     top: 50%;
@@ -306,3 +321,396 @@ form textarea{
 .socials a:hover img {
     opacity: 50%;
   }
+
+  
+@media screen and (min-width: 600px) and (max-width:850px) {
+    .navbar{
+        font-size: 17px;
+    }
+    .gallery-hover-content{
+        display: none;
+    }
+    .features {
+        grid-template-areas:
+          "h2 h2"
+          "one two"
+          "three four"
+          "five six";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+      }
+    
+      .caption {
+        grid-area: h2;
+      }
+    
+      .one {
+        grid-area: one;
+      }
+    
+      .two {
+        grid-area: two;
+      }
+    
+      .three {
+        grid-area: three;
+      }
+    
+      .four {
+        grid-area: four;
+      }
+    
+      .five {
+        grid-area: five;
+      }
+    
+      .six {
+        grid-area: six;
+      }
+    
+      .one,
+      .two,
+      .three,
+      .four,
+      .five {
+        border-right: 1px solid #000;
+      }
+    section p{
+        font-size: 1rem;
+        
+    }
+  
+    .article1{
+        padding-bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    
+        
+    }
+    
+    .greeting{
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        
+
+    
+    }
+    .article2{
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+    .imgg{
+        width: 50%;
+    }
+    .imgg1{
+        width: 50%;
+    }
+    .main-img{
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+    }
+    .main-img1{
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+    }
+    .text1{
+        font-size: 0.7rem;
+        height: 400px;
+        width: 50%;
+        padding: 5% 5%; 
+        
+     }
+    .text{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       font-size: 0.7rem;
+       height: 400px;
+       width: 50%;
+       padding: 5% 5%; 
+
+       
+    }
+    .gallery{
+        width: 100%;
+    }
+    .gallery-images{
+        width:100%;
+        display:flex ;
+    }
+    .gallery .first-image{
+        width: 50%;
+        display: block;
+    }
+    .gallery-images .second-image{
+        display: block;
+        width: 50%;
+    }
+    .gallery-images .third-image{
+        display: none;
+        
+    }
+    .fourth-image{
+    display: none;
+    }
+
+   
+
+    .form-info{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .form-info input{
+        width: 95%;
+    }
+    .contact-method > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .social-icons{
+        display: none;
+    }
+    
+}
+
+
+@media screen and (min-width: 850px) {
+    .navbar{
+        width: 100%;
+        margin-bottom: 130px;
+        font-size: 20px;
+    }
+    
+    .gallery-hover-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        display: none;
+      }
+      .hover-text{
+
+      }
+    
+      .gallery-images:hover .gallery-hover-content {
+        color: white;
+        width: 300px;
+        height: 100%;
+        text-align: center;
+        opacity: 1;
+        display: flex;
+      }
+      .gallery-images:hover .arrow {
+        display: block;
+      }
+      
+   
+    section{
+        padding-top: 30px;
+        margin: 0 auto;
+        max-width: 1500px;
+    }
+    header{
+        margin: 0 auto;
+        max-width: 80%;
+    }
+    main{
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+    footer{
+        max-width: 1800px;
+    }
+    .article1{
+        border-top: 2px solid grey;
+        padding-bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .greeting{
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    
+    }
+
+    .imgg1{
+        width: 55%;
+
+    }
+    .imgg{
+        width: 55%;
+    }
+
+    .article2{
+        border-top: 2px solid grey;
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+    .text1{
+        display: flex;
+        flex-direction: column;
+        justify-content: ;
+        font-size: 17px;
+        height: 400px;
+        width: 45%;
+        padding: 5% 5%; 
+        
+     }
+    
+    .text{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       padding: 0 10px;
+       font-size: 17px;
+       height: 400px;
+       width: 45%;
+       padding: 0 5%;
+    }
+    .main-img{
+        width: 100%;
+        height: 450px;
+        max-height: 500px;
+        object-fit: cover;
+    }
+    .main-img1{
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+    }
+    
+    
+    .gallery-images{
+        width:100%;
+       
+
+    }
+    .gallery .first-image{
+        width:25%;
+        height: 250px;
+        display: block;
+    }
+    .gallery .second-image{
+        width: 25%;
+        height: 250px;
+        display: block;
+    }
+    .gallery .third-image{
+        display: block;
+        height: 250px;
+        width: 25%;
+        
+    }
+    .gallery .fourth-image{
+        display: block;
+        height: 250px;
+        width: 25%;
+    }
+
+    .features {
+        margin: 0 auto;
+        width: 80%;
+      }
+      
+      .features h1 {
+        padding-top: 100px;
+        padding-bottom: 70px;
+        text-align: center;
+      }
+      
+    
+      
+
+      form{
+        width: 100%;
+        max-width: 1000px;
+        padding: 0 30px;
+      }
+      .form-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      
+      .form-info div {
+        padding: 0 5px;
+        flex: 1 1 30%;
+        margin-bottom: 10px;
+      }
+      
+      .form-info input {
+        width: 100%;
+      }
+      .navbar {
+        max-width: 2500px;
+        position: sticky; 
+        top: 0; 
+        z-index: 100; 
+      }
+      .features {
+        grid-template-areas:
+          "h2 h2 h2"
+          "one two three"
+          "four five six";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+      }
+    
+      .caption {
+        grid-area: h2;
+      }
+    
+      .one {
+        grid-area: one;
+      }
+    
+      .two {
+        grid-area: two;
+      }
+    
+      .three {
+        grid-area: three;
+      }
+    
+      .four {
+        grid-area: four;
+      }
+    
+      .five {
+        grid-area: five;
+      }
+    
+      .six {
+        grid-area: six;
+      }
+    
+      .one,
+      .two,
+      .four,
+      .five {
+        border-right: 1px solid #000;
+      }
+   
+}
