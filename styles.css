@@ -43,3 +43,170 @@ header .header-brand{
     margin-left: 8px;
   }
   
+  
+  
+.article1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    padding-bottom: 30px;
+
+    
+}
+.greeting{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+.article2{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+.first-button{
+    margin-bottom: 30px;
+}
+
+
+.text{
+   margin-top: 20px;
+   padding: 0 10%;
+   
+}
+.text1{
+    padding: 3% 20%;
+    
+ }
+button{
+    margin-top: 30px;
+    width:fit-content;
+    padding: 10px 25px;
+}
+.text h2{
+    font-weight: 550;
+    padding-bottom: 20px;
+}
+.text p{
+    display: block;
+    margin-right: 10px;
+}
+
+.gallery{
+    width: 100%;
+}
+
+.gallery .first-img{
+    display: none;
+}
+
+.gallery .second-img{
+    width: 100%;
+}
+
+
+.gallery h1{
+    padding: 50px 0;
+    text-align: center;
+}
+.third-image{
+    display: none;
+}
+.gallery-images{
+    display: flex;
+}
+.fourth-image{
+    display: none;
+}
+.gallery-images {
+    position: relative;
+  }
+
+
+.hover-text p,h1{
+    font-size: 0.9rem;
+}
+ .gallery-images .arrow {
+    display:none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+  }
+  .left-arrow {
+    top: 50%;
+    left: 0;
+  }
+  
+  .right-arrow{
+    top: 50%;
+    right: 0;
+  }
+  .features {
+    display: grid;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto repeat(6, 300px);
+  }
+  
+  .features .caption{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 70px;
+  }
+  
+  .features .one,
+  .features .two,
+  .features .three,
+  .features .four,
+  .features .five,
+  .features .six {
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .one {
+    grid-row: 2;
+    border-bottom: 1px solid black;
+  }
+  
+  .two {
+    grid-row: 3;
+    border-bottom: 1px solid black;
+  }
+  
+  .three {
+    grid-row: 4;
+    border-bottom: 1px solid black;
+  }
+  
+  .four {
+    grid-row: 5;
+    border-bottom: 1px solid black;
+  }
+  
+  .five {
+    grid-row: 6;
+    border-bottom: 1px solid black;
+  }
+  
+  .six {
+    grid-row: 7;
+    border-bottom: 1px solid black;
+  }
