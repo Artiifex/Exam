@@ -3,53 +3,61 @@
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: alkatra;
 }
+
 
 
 body{
     width: 100%;
-    font-family: 'Alkatra', cursive;
+    font-family: 'Alkatra';
     background: #f3f3f3
 }
 
 
 body button{
     border-radius: 10px;
+    margin-top: 30px;
+    width: fit-content;
+    padding: 4% 5%;
+    background-color: #4cacaf;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 header{
-    padding-top: 20px;
     width: 100%;
     height: 130px
 }
 
-
-header .header-brand{
-    font-size: 24px;
-    color: #111;
-    font-weight: 900;
-    text-transform: uppercase;
-    
+.navbar .navbar-brand{
+  font-size: 30px;
+  margin-bottom: -35px;
 }
-.navbar-brand {
-    white-space: nowrap;
-  }
-  
   .navbar-nav {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
    }
    .navbar-nav .nav-item{
     padding: 0 1%;
    }
+
   
   .social-icons a {
     color: black;
-    padding-left: 2px;
+    padding-left: 20px;
     font-size: 24px;
     margin-left: 8px;
+  }
+  .social-icons a:hover{
+    transition: 0.5s;
+    color: #4cacaf;
   }
   
   section img{
@@ -99,11 +107,7 @@ header .header-brand{
     padding: 5% 15%;
     
  }
-button{
-    margin-top: 30px;
-    width:fit-content;
-    padding: 10px 25px;
-}
+
 .text h2{
     font-weight: 550;
     padding-bottom: 20px;
@@ -114,10 +118,6 @@ button{
 }
 
 .gallery{
-    width: 100%;
-}
-
-.gallery .first-image{
     width: 100%;
 }
 
@@ -139,32 +139,65 @@ button{
 .fourth-image{
     display: none;
 }
-.gallery-images {
-    position: relative;
-  }
 
 
-.hover-text p,h1{
-    font-size: 0.9rem;
+
+
+
+
+.gallery-hover-content {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  display: none;
 }
- .gallery-images .arrow {
-    display:none;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-  }
-  .left-arrow {
-    top: 50%;
-    left: 0;
-  }
-  .gallery-hover-content{
+.hover-text{
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hover-text button{
+  font-size: 0.9rem;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  object-fit: cover;
+  background-color: #4cacaf;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.first-image,
+.second-image,
+.third-image,
+.fourth-image{
+  position: relative;
+}
+ 
+.gallery .first-image img{
+  width: 100%;
+
+}
+.gallery-hover-content{
     display: none;
 }
-  
-  .right-arrow{
-    top: 50%;
-    right: 0;
-  }
+
   .features {
     display: grid;
     margin: 0 auto;
@@ -182,6 +215,7 @@ button{
     padding-top: 100px;
     padding-bottom: 70px;
   }
+  
   
   .features .one,
   .features .two,
@@ -225,7 +259,16 @@ button{
     grid-row: 7;
     border-bottom: 1px solid black;
   }
-  
+  .features 
+  .one a img:hover,
+  .two img:hover,
+  .three img:hover,
+  .four img:hover,
+  .five img:hover,
+  .six img:hover{
+    color: #5caf4c;
+  }
+ 
 footer{
     margin: 0 auto;
     width: 100%;
@@ -233,6 +276,7 @@ footer{
 
 footer h1{
     padding-top: 100px;
+    padding-bottom: 30px;
     text-align: center;
 }
 
@@ -251,8 +295,11 @@ footer p{
 form label{
     padding-bottom: 5px;
 }
-
+form input{
+  border-radius: 5px;
+}
 form select{
+    border-radius: 5px;
     height: 30px;
 }
 form input[type="text"]{
@@ -293,6 +340,9 @@ form textarea{
     display: flex;
     flex-direction: column;
 }
+.contact-via label{
+  padding: 0 10px;
+}
 
 #contact-method label{
     margin-right: 10px;
@@ -324,8 +374,15 @@ form textarea{
 
   
 @media screen and (min-width: 600px) and (max-width:850px) {
+  .navbar .navbar-brand {
+    margin-top: -27px
+  }
+  .navbar-nav .nav-item{
+    font-size: 20px;
+     padding-top: 20px ;
+  }
     .navbar{
-        font-size: 17px;
+        font-size: 19px;
     }
     .gallery-hover-content{
         display: none;
@@ -377,7 +434,13 @@ form textarea{
       }
     section p{
         font-size: 1rem;
-        
+    }
+
+    section button{
+      font-size: 1.1rem;
+    }
+    form button{
+      font-size: 1rem;
     }
   
     .article1{
@@ -454,6 +517,9 @@ form textarea{
         display: block;
         width: 50%;
     }
+    .gallery-images .second-image img{
+      width: 100%;
+  }
     .gallery-images .third-image{
         display: none;
         
@@ -486,39 +552,45 @@ form textarea{
 
 
 @media screen and (min-width: 850px) {
+
+    .navbar .navbar-brand{
+      margin-bottom: 0px;
+      font-size: 30px;
+    }
     .navbar{
         width: 100%;
         margin-bottom: 130px;
-        font-size: 20px;
+        font-size: 1.2rem;
+    }
+    .navbar .nav-item{
+      
+      font-size: 1.2rem;
     }
     
-    .gallery-hover-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0;
-        display: none;
-      }
-      .hover-text{
-
-      }
+    .gallery-images div:hover .gallery-hover-content {
+      font-size: 0.9rem;
+      color: white;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      opacity: 1;
+      display: flex;
+    }
+    .a1{
+      width: 15%;
+      height: 15%;
+      position: absolute;
+      left: 0%;
+    }
+    .a2{
+      height: 15%;
+      width: 15%;
+      position: absolute;
+      right: 0%;
+    }
+  
     
-      .gallery-images:hover .gallery-hover-content {
-        color: white;
-        width: 300px;
-        height: 100%;
-        text-align: center;
-        opacity: 1;
-        display: flex;
-      }
-      .gallery-images:hover .arrow {
-        display: block;
-      }
-      
+    
    
     section{
         padding-top: 30px;
@@ -608,25 +680,41 @@ form textarea{
 
     }
     .gallery .first-image{
+      height: 250px;
         width:25%;
-        height: 250px;
         display: block;
+    }
+    .gallery .first-image img{
+      height: 100%;
+      width: 100%;
     }
     .gallery .second-image{
+      height: 250px;
         width: 25%;
-        height: 250px;
         display: block;
     }
+    .gallery .second-image img{
+      height: 100%;
+      width: 100%;
+    }
     .gallery .third-image{
-        display: block;
         height: 250px;
+        display: block;
         width: 25%;
         
     }
+    .gallery .third-image img{
+      height: 100%;
+      width: 100%;
+    }
     .gallery .fourth-image{
-        display: block;
         height: 250px;
+        display: block;
         width: 25%;
+    }
+    .gallery .fourth-image img{
+      width: 100%;
+      height: 100%;
     }
 
     .features {
@@ -651,17 +739,23 @@ form textarea{
       .form-info {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        
       }
       
       .form-info div {
-        padding: 0 5px;
-        flex: 1 1 30%;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 25%;
         margin-bottom: 10px;
       }
       
       .form-info input {
         width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .form-info div:not(:last-child) {
+        margin-right: 10px;
       }
       .navbar {
         max-width: 2500px;
